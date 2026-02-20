@@ -31,6 +31,15 @@ index_info
 
 ### 示例代码
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py index_info --index_id index0070c0eb-93ba-2da9-6633-fa70cb90e959 --format pretty
+python3 scripts/akshare_cli.py index_info --index_id index0070c0eb-93ba-2da9-6633-fa70cb90e959 --format csv > index_info.csv
+```
+
+Python (Legacy):
+
 ```python
 from akshare import pro_api
 
@@ -77,6 +86,15 @@ index_weights
 | weight  | float  | 权重值，百分数 |
 
 ### 示例代码
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py index_weights --index_id index0070c0eb-93ba-2da9-6633-fa70cb90e959 --date 2018-08-08 --format pretty
+python3 scripts/akshare_cli.py index_weights --index_id index0070c0eb-93ba-2da9-6633-fa70cb90e959 --date 2018-08-08 --format csv > index_weights.csv
+```
+
+Python (Legacy):
 
 ```python
 from akshare import pro_api

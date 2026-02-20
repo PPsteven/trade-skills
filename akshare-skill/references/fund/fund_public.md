@@ -28,6 +28,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py fund_name_em --format pretty
+python3 scripts/akshare_cli.py fund_name_em --format csv > fund_list.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
