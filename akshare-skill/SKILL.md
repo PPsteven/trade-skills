@@ -9,19 +9,33 @@ AKShare is a Python package providing access to Chinese financial market data. T
 
 ## Quick Start
 
-To use AKShare in Python:
+AKShare can be used via CLI wrapper or Python library.
+
+### CLI (Recommended)
+
+```bash
+# Get stock data
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20200101 --end_date 20210101 --format pretty
+
+# Export to CSV
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20200101 --end_date 20210101 --format csv > stock_data.csv
+
+# Get as JSON
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20200101 --end_date 20210101 --format json
+```
+
+### Python Library (Legacy)
 
 ```python
 import akshare as ak
 
-# Example: Get stock data
 stock_df = ak.stock_zh_a_hist(symbol="000001", start_date="20200101", end_date="20210101")
 print(stock_df)
 ```
 
 ## Data Categories
 
-Browse API documentation by asset class:
+All APIs below are available via CLI wrapper. See individual API docs for both CLI and Python usage:
 
 ### **Equities & Indices**
 - **[Stock Data](stock.md)** - A/B shares, history, daily snapshots, sector data, board listings
@@ -118,3 +132,34 @@ See [macro.md](macro.md) - GDP, inflation, industrial production
 
 ### Hong Kong/Singapore market data:
 See [qhkc/](qhkc/) subdirectory for index data, fundamentals, and analysis tools
+
+## CLI Usage Guide
+
+All AKShare functions are available via the CLI wrapper in `scripts/akshare_cli.py`.
+
+### Output Formats
+
+- `--format pretty`: Human-readable tables (default)
+- `--format csv`: CSV format for import into Excel/databases
+- `--format json`: JSON format for API integration
+
+### Examples by Category
+
+```bash
+# Stock data
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20240101 --end_date 20240110
+
+# Index data
+python3 scripts/akshare_cli.py index_zh_a_hist --symbol 000001 --start_date 20240101 --end_date 20240110
+
+# Macro data
+python3 scripts/akshare_cli.py macro_china_gdp --format json
+
+# Bank data
+python3 scripts/akshare_cli.py bank_fjcf_table_detail --page 1 --item "分局本级"
+
+# Export to file
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20240101 --end_date 20240110 --format csv > output.csv
+```
+
+See [CLI_DESIGN.md](CLI_DESIGN.md) for complete CLI documentation.
