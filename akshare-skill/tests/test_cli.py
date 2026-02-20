@@ -37,6 +37,14 @@ class TestAKShareCLI:
         data = json.loads(result.stdout)
         assert isinstance(data, list)
 
+    def test_macro_china_gdp_default_json(self):
+        """Test macro_china_gdp with default format (JSON)"""
+        result = self.run_cli("macro_china_gdp")
+        assert result.returncode == 0
+        # Verify valid JSON (default format is now json)
+        data = json.loads(result.stdout)
+        assert isinstance(data, list)
+
     def test_invalid_function(self):
         """Test error handling for invalid function"""
         result = self.run_cli("nonexistent_function")

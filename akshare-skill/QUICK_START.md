@@ -23,22 +23,22 @@ python3 scripts/akshare_cli.py --help
 
 ### 2. 宏观经济数据
 
-**获取中国 GDP 数据（表格格式）**
+**获取中国 GDP 数据（JSON 是默认格式）**
 ```bash
-python3 scripts/akshare_cli.py macro_china_gdp --format pretty
+python3 scripts/akshare_cli.py macro_china_gdp
 ```
 
-**导出为 JSON**
+**导出为 JSON（显式指定）**
 ```bash
 python3 scripts/akshare_cli.py macro_china_gdp --format json
 ```
 
-**导出为 CSV**
+**导出为 CSV（用于复杂分析时）**
 ```bash
 python3 scripts/akshare_cli.py macro_china_gdp --format csv > gdp.csv
 ```
 
-**获取 CPI 数据**
+**获取 CPI 数据（表格格式供人查看）**
 ```bash
 python3 scripts/akshare_cli.py macro_china_cpi_yearly --format pretty
 ```
@@ -88,9 +88,9 @@ python3 scripts/akshare_cli.py bank_fjcf_table_detail \
 
 | 格式 | 说明 | 用途 |
 |------|------|------|
-| `pretty` | 人类可读表格（默认） | 终端查看 |
-| `csv` | 逗号分隔值 | Excel、数据库导入 |
-| `json` | JSON 格式 | API、程序集成 |
+| `json` | JSON 格式（默认） | API、程序集成 |
+| `pretty` | 人类可读表格 | 终端查看 |
+| `csv` | 逗号分隔值 | Excel、数据库导入（复杂分析时使用） |
 | `raw` | 原始 Python 表示 | 调试 |
 
 ## 常见用法

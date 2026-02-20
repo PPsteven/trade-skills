@@ -1,6 +1,6 @@
 ---
 name: akshare-skill
-description: Reference documentation for AKShare financial data APIs. Use when working with AKShare to access Chinese financial market data including stocks, futures, funds, bonds, forex, macroeconomic indicators, and other asset classes. Contains comprehensive API parameter documentation, output schemas, and code examples for all data categories supported by AKShare.
+description: AKShare CLI wrapper and API reference documentation. Use this skill to access Chinese financial market data via command line (stocks, futures, funds, bonds, forex, macro indicators) or browse comprehensive API documentation with parameter tables, output schemas, and code examples for all supported data categories.
 ---
 
 # AKShare Data API Reference
@@ -14,14 +14,14 @@ AKShare can be used via CLI wrapper or Python library.
 ### CLI (Recommended)
 
 ```bash
-# Get stock data
-python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20200101 --end_date 20210101 --format pretty
+# Get stock data (JSON output is default)
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20200101 --end_date 20210101
 
-# Export to CSV
-python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20200101 --end_date 20210101 --format csv > stock_data.csv
-
-# Get as JSON
+# Get as JSON explicitly
 python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20200101 --end_date 20210101 --format json
+
+# Export to CSV when needed for complex analysis
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --start_date 20200101 --end_date 20210101 --format csv > stock_data.csv
 ```
 
 ### Python Library (Legacy)
@@ -38,41 +38,41 @@ print(stock_df)
 All APIs below are available via CLI wrapper. See individual API docs for both CLI and Python usage:
 
 ### **Equities & Indices**
-- **[Stock Data](stock.md)** - A/B shares, history, daily snapshots, sector data, board listings
-- **[Index Data](index.md)** - Stock indices, index components, performance data
+- **[Stock Data](references/stock.md)** - A/B shares, history, daily snapshots, sector data, board listings
+- **[Index Data](references/index.md)** - Stock indices, index components, performance data
 
 ### **Fixed Income & Rates**
-- **[Bonds](bond.md)** - Government bonds, corporate bonds, municipal bonds
-- **[Interest Rates](interest_rate.md)** - LPR rates, deposit/loan rates, yield curves
+- **[Bonds](references/bond.md)** - Government bonds, corporate bonds, municipal bonds
+- **[Interest Rates](references/interest_rate.md)** - LPR rates, deposit/loan rates, yield curves
 
 ### **Derivatives & Futures**
-- **[Futures](futures.md)** - Futures contracts, open interest, delivery data
-- **[Options](option.md)** - Options contracts, Greeks, implied volatility
+- **[Futures](references/futures.md)** - Futures contracts, open interest, delivery data
+- **[Options](references/option.md)** - Options contracts, Greeks, implied volatility
 
 ### **Alternative Assets**
-- **[Funds](fund/)** - Public funds (mutual funds), private funds (hedge funds), fund ratings
-- **[QDII](qdii.md)** - Qualified Domestic Institutional Investor products
-- **[Commodities & Spot Trading](spot.md)** - Commodity futures, spot market data
+- **[Funds](references/fund/)** - Public funds (mutual funds), private funds (hedge funds), fund ratings
+- **[QDII](references/qdii.md)** - Qualified Domestic Institutional Investor products
+- **[Commodities & Spot Trading](references/spot.md)** - Commodity futures, spot market data
 
 ### **Forex & International**
-- **[Foreign Exchange (FX)](fx.md)** - Currency pairs, exchange rates
-- **[Hong Kong/Singapore Data (QHKC)](qhkc/)** - Hong Kong stocks, Singapore data, commodity analysis
+- **[Foreign Exchange (FX)](references/fx.md)** - Currency pairs, exchange rates
+- **[Hong Kong/Singapore Data (QHKC)](references/qhkc/)** - Hong Kong stocks, Singapore data, commodity analysis
 
 ### **Macro & Economics**
-- **[Macroeconomic Data](macro.md)** - GDP, CPI, industrial production, consumer spending
-- **[Currency & FX Markets](currency.md)** - Currency data, forex indicators
-- **[Energy Data](energy.md)** - Oil, coal, natural gas prices and data
-- **[Interest Rates](interest_rate.md)** - Central bank rates, yield curves
+- **[Macroeconomic Data](references/macro.md)** - GDP, CPI, industrial production, consumer spending
+- **[Currency & FX Markets](references/currency.md)** - Currency data, forex indicators
+- **[Energy Data](references/energy.md)** - Oil, coal, natural gas prices and data
+- **[Interest Rates](references/interest_rate.md)** - Central bank rates, yield curves
 
 ### **Specialized Data**
-- **[Bank Data](bank.md)** - Bank regulatory data, administrative penalties
-- **[Data Center (DC)](dc.md)** - Data center services and infrastructure
-- **[Digital Currency](dc.md)** - Cryptocurrency and digital asset data
-- **[Events & News](event.md)** - Market events, corporate actions, news events
-- **[Natural Language Processing](nlp.md)** - Text analysis, sentiment analysis
-- **[Technical Indicators & Tools](tool.md)** - Technical analysis tools, indicators
-- **[Financial Articles](article.md)** - Financial research articles and reports
-- **[Others](others.md)** - Additional specialized data sources
+- **[Bank Data](references/bank.md)** - Bank regulatory data, administrative penalties
+- **[Data Center (DC)](references/dc.md)** - Data center services and infrastructure
+- **[Digital Currency](references/dc.md)** - Cryptocurrency and digital asset data
+- **[Events & News](references/event.md)** - Market events, corporate actions, news events
+- **[Natural Language Processing](references/nlp.md)** - Text analysis, sentiment analysis
+- **[Technical Indicators & Tools](references/tool.md)** - Technical analysis tools, indicators
+- **[Financial Articles](references/article.md)** - Financial research articles and reports
+- **[Others](references/others.md)** - Additional specialized data sources
 
 ## API Documentation Structure
 
@@ -101,8 +101,8 @@ Common parameter patterns across AKShare APIs:
 
 Some data categories have multiple sub-APIs:
 
-- **[Funds (fund/)](fund/)** - Public funds vs. private funds documentation
-- **[QHKC (qhkc/)](qhkc/)** - Hong Kong stocks, fundamentals, brokers, commodities, analysis tools
+- **[Funds (references/fund/)](references/fund/)** - Public funds vs. private funds documentation
+- **[QHKC (references/qhkc/)](references/qhkc/)** - Hong Kong stocks, fundamentals, brokers, commodities, analysis tools
 
 ## Finding What You Need
 
@@ -119,19 +119,19 @@ Some data categories have multiple sub-APIs:
 ## Example Usage Patterns
 
 ### Get historical stock data:
-See [stock.md](stock.md) - use `stock_zh_a_hist()` function
+See [references/stock.md](references/stock.md) - use `stock_zh_a_hist()` function
 
 ### Access futures data:
-See [futures.md](futures.md) - functions like `futures_open_interest()`, `futures_delivery()`
+See [references/futures.md](references/futures.md) - functions like `futures_open_interest()`, `futures_delivery()`
 
 ### Query fund performance:
-See [fund/fund_public.md](fund/fund_public.md) for mutual funds or [fund/fund_private.md](fund/fund_private.md) for private funds
+See [references/fund/fund_public.md](references/fund/fund_public.md) for mutual funds or [references/fund/fund_private.md](references/fund/fund_private.md) for private funds
 
 ### Macroeconomic indicators:
-See [macro.md](macro.md) - GDP, inflation, industrial production
+See [references/macro.md](references/macro.md) - GDP, inflation, industrial production
 
 ### Hong Kong/Singapore market data:
-See [qhkc/](qhkc/) subdirectory for index data, fundamentals, and analysis tools
+See [references/qhkc/](references/qhkc/) subdirectory for index data, fundamentals, and analysis tools
 
 ## CLI Usage Guide
 
@@ -139,9 +139,9 @@ All AKShare functions are available via the CLI wrapper in `scripts/akshare_cli.
 
 ### Output Formats
 
-- `--format pretty`: Human-readable tables (default)
-- `--format csv`: CSV format for import into Excel/databases
-- `--format json`: JSON format for API integration
+- `--format json`: JSON format for API integration (default)
+- `--format pretty`: Human-readable tables
+- `--format csv`: CSV format for import into Excel/databases (use when complex analysis is needed)
 
 ### Examples by Category
 

@@ -83,8 +83,8 @@ class AKShareCLI:
         parser.add_argument(
             "--format",
             choices=["json", "csv", "pretty", "raw"],
-            default="pretty",
-            help="Output format (default: pretty)"
+            default="json",
+            help="Output format (default: json)"
         )
 
         # Add parameters from function signature
