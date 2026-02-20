@@ -31,11 +31,22 @@
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_sse_summary_df = ak.stock_sse_summary()
 print(stock_sse_summary_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_sse_summary --format pretty
+```
+
+**Export to CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_sse_summary --format csv > sse_summary.csv
 ```
 
 数据示例
@@ -82,11 +93,22 @@ print(stock_sse_summary_df)
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_szse_summary_df = ak.stock_szse_summary(date="20200619")
 print(stock_szse_summary_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_szse_summary --date 20200619 --format pretty
+```
+
+**Export to JSON:**
+```bash
+python3 scripts/akshare_cli.py stock_szse_summary --date 20200619 --format json > szse_summary.json
 ```
 
 数据示例
@@ -153,11 +175,22 @@ print(stock_szse_summary_df)
 | 期权交易额  | float64 | 注意单位: 元 |
 | 接口示例   |         |         |
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_szse_area_summary_df = ak.stock_szse_area_summary(date="202412")
 print(stock_szse_area_summary_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_szse_area_summary --date 202412 --format pretty
+```
+
+**Export to CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_szse_area_summary --date 202412 --format csv > szse_area_summary.csv
 ```
 
 数据示例
@@ -200,11 +233,17 @@ print(stock_szse_area_summary_df)
 33  34    青海  3.967756e+10   0.068  2.884644e+10  4.814743e+08  1.034965e+10
 ```
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_szse_area_summary_df = ak.stock_szse_area_summary(date="202508")
 print(stock_szse_area_summary_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_szse_area_summary --date 202508 --format pretty
 ```
 
 ```
@@ -280,11 +319,22 @@ print(stock_szse_area_summary_df)
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_szse_sector_summary_df = ak.stock_szse_sector_summary(symbol="当年", date="202501")
 print(stock_szse_sector_summary_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_szse_sector_summary --symbol 当年 --date 202501 --format pretty
+```
+
+**Export to CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_szse_sector_summary --symbol 当年 --date 202501 --format csv > szse_sector.csv
 ```
 
 数据示例
@@ -1162,11 +1212,22 @@ print(stock_zh_ab_comparison_em_df)
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_zh_a_spot_df = ak.stock_zh_a_spot()
 print(stock_zh_a_spot_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_spot --format pretty
+```
+
+**Export to Excel:**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_spot --format csv > stock_spot.csv
 ```
 
 数据示例
@@ -1214,11 +1275,22 @@ print(stock_zh_a_spot_df)
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_individual_spot_xq_df = ak.stock_individual_spot_xq(symbol="SH600000")
 print(stock_individual_spot_xq_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_individual_spot_xq --symbol SH600000 --format pretty
+```
+
+**Get JSON Format:**
+```bash
+python3 scripts/akshare_cli.py stock_individual_spot_xq --symbol SH600000 --format json
 ```
 
 数据示例
@@ -1327,11 +1399,22 @@ print(stock_individual_spot_xq_df)
 
 接口示例-历史行情数据-不复权
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_zh_a_hist_df = ak.stock_zh_a_hist(symbol="000001", period="daily", start_date="20170301", end_date='20240528', adjust="")
 print(stock_zh_a_hist_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --period daily --start-date 20170301 --end-date 20240528 --format pretty
+```
+
+**Export to CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --period daily --start-date 20170301 --end-date 20240528 --format csv > stock_hist.csv
 ```
 
 数据示例-历史行情数据-不复权
@@ -1354,11 +1437,22 @@ print(stock_zh_a_hist_df)
 
 接口示例-历史行情数据-前复权
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_zh_a_hist_df = ak.stock_zh_a_hist(symbol="000001", period="daily", start_date="20170301", end_date='20240528', adjust="qfq")
 print(stock_zh_a_hist_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --period daily --start-date 20170301 --end-date 20240528 --adjust qfq --format pretty
+```
+
+**Export to CSV (前复权):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --period daily --start-date 20170301 --end-date 20240528 --adjust qfq --format csv > stock_hist_qfq.csv
 ```
 
 数据示例-历史行情数据-前复权
@@ -1381,11 +1475,22 @@ print(stock_zh_a_hist_df)
 
 接口示例-历史行情数据-后复权
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_zh_a_hist_df = ak.stock_zh_a_hist(symbol="000001", period="daily", start_date="20170301", end_date='20240528', adjust="hfq")
 print(stock_zh_a_hist_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --period daily --start-date 20170301 --end-date 20240528 --adjust hfq --format pretty
+```
+
+**Export to CSV (后复权):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_hist --symbol 000001 --period daily --start-date 20170301 --end-date 20240528 --adjust hfq --format csv > stock_hist_hfq.csv
 ```
 
 数据示例-历史行情数据-后复权
@@ -1464,11 +1569,22 @@ P.S. 建议切换为 stock_zh_a_hist 接口使用(该接口数据质量高, 访�
 
 接口示例-历史行情数据(前复权)
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_zh_a_daily_qfq_df = ak.stock_zh_a_daily(symbol="sz000001", start_date="19910403", end_date="20231027", adjust="qfq")
 print(stock_zh_a_daily_qfq_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_daily --symbol sz000001 --start-date 19910403 --end-date 20231027 --adjust qfq --format pretty
+```
+
+**Export to CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_daily --symbol sz000001 --start-date 19910403 --end-date 20231027 --adjust qfq --format csv > daily_qfq.csv
 ```
 
 数据示例-历史行情数据(前复权)
@@ -1491,11 +1607,22 @@ print(stock_zh_a_daily_qfq_df)
 
 接口示例-历史行情数据(后复权)
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_zh_a_daily_hfq_df = ak.stock_zh_a_daily(symbol="sz000001", start_date="19910403", end_date="20231027", adjust="hfq")
 print(stock_zh_a_daily_hfq_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_daily --symbol sz000001 --start-date 19910403 --end-date 20231027 --adjust hfq --format pretty
+```
+
+**Export to CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_daily --symbol sz000001 --start-date 19910403 --end-date 20231027 --adjust hfq --format csv > daily_hfq.csv
 ```
 
 数据示例-历史行情数据(后复权)
@@ -1518,11 +1645,22 @@ print(stock_zh_a_daily_hfq_df)
 
 接口示例-前复权因子
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 qfq_factor_df = ak.stock_zh_a_daily(symbol="sz000002", adjust="qfq-factor")
 print(qfq_factor_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_daily --symbol sz000002 --adjust qfq-factor --format pretty
+```
+
+**Get JSON:**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_daily --symbol sz000002 --adjust qfq-factor --format json
 ```
 
 数据示例-前复权因子
@@ -1784,11 +1922,22 @@ print(stock_zh_a_hist_tx_df)
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_zh_a_minute_df = ak.stock_zh_a_minute(symbol='sh600751', period='1', adjust="qfq")
 print(stock_zh_a_minute_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_minute --symbol sh600751 --period 1 --adjust qfq --format pretty
+```
+
+**Export to CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_zh_a_minute --symbol sh600751 --period 5 --adjust qfq --format csv > minute_data.csv
 ```
 
 数据示例
@@ -4350,11 +4499,22 @@ print(stock_us_famous_spot_em_df)
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_hk_spot_em_df = ak.stock_hk_spot_em()
 print(stock_hk_spot_em_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_hk_spot_em --format pretty
+```
+
+**Export to CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_hk_spot_em --format csv > hk_stocks.csv
 ```
 
 数据示例
@@ -4409,11 +4569,22 @@ print(stock_hk_spot_em_df)
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_hk_main_board_spot_em_df = ak.stock_hk_main_board_spot_em()
 print(stock_hk_main_board_spot_em_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_hk_main_board_spot_em --format pretty
+```
+
+**Export to Excel-compatible CSV:**
+```bash
+python3 scripts/akshare_cli.py stock_hk_main_board_spot_em --format csv > hk_mainboard.csv
 ```
 
 数据示例
@@ -9894,11 +10065,22 @@ print(stock_hk_fhpx_detail_ths_df)
 
 接口示例-即时
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_fund_flow_individual_df = ak.stock_fund_flow_individual(symbol="即时")
 print(stock_fund_flow_individual_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_fund_flow_individual --symbol 即时 --format pretty
+```
+
+**Get 3-day ranking:**
+```bash
+python3 scripts/akshare_cli.py stock_fund_flow_individual --symbol 3日排行 --format csv > fund_flow_3d.csv
 ```
 
 数据示例-即时
@@ -14652,11 +14834,22 @@ print(stock_circulate_stock_holder_df)
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 stock_industry_sina_df = ak.stock_sector_spot(indicator="新浪行业")
 print(stock_industry_sina_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py stock_sector_spot --indicator 新浪行业 --format pretty
+```
+
+**Get Concept Data:**
+```bash
+python3 scripts/akshare_cli.py stock_sector_spot --indicator 概念 --format csv > sectors_concept.csv
 ```
 
 数据示例
