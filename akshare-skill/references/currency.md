@@ -33,6 +33,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py currency_latest --base USD --format pretty
+python3 scripts/akshare_cli.py currency_latest --base USD --symbols AUD,CNY --format csv > currency_latest.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 

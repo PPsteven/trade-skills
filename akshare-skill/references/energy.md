@@ -30,6 +30,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py energy_carbon_domestic --symbol 湖北 --format pretty
+python3 scripts/akshare_cli.py energy_carbon_domestic --symbol 上海 --format csv > energy_carbon.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 

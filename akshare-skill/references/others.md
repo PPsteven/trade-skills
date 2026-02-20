@@ -29,6 +29,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py car_market_total_cpca --symbol 狭义乘用车 --indicator 产量 --format pretty
+python3 scripts/akshare_cli.py car_market_total_cpca --symbol 狭义乘用车 --indicator 零售 --format csv > car_market.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
