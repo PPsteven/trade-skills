@@ -35,11 +35,22 @@
 
 接口示例
 
+**Python (Legacy):**
 ```python
 import akshare as ak
 
 bank_fjcf_table_detail_df = ak.bank_fjcf_table_detail(page=5, item="分局本级")
 print(bank_fjcf_table_detail_df)
+```
+
+**CLI (Recommended):**
+```bash
+python3 scripts/akshare_cli.py bank_fjcf_table_detail --page 5 --item "分局本级" --format pretty
+```
+
+**Export to JSON:**
+```bash
+python3 scripts/akshare_cli.py bank_fjcf_table_detail --page 5 --item "分局本级" --format json > bank_detail.json
 ```
 
 数据示例
