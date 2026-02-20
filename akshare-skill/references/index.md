@@ -98,6 +98,15 @@ print(stock_zh_index_spot_em_df)
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py stock_zh_index_spot_sina --format pretty
+python3 scripts/akshare_cli.py stock_zh_index_spot_sina --format csv > index_data.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -154,6 +163,15 @@ print(stock_zh_index_spot_sina_df)
 
 接口示例-历史行情数据
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py stock_zh_index_daily --symbol sz399552 --format pretty
+python3 scripts/akshare_cli.py stock_zh_index_daily --symbol sz399552 --format csv > index_daily.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -207,6 +225,15 @@ print(stock_zh_index_daily_df)
 | amount | float64 | 注意单位: 手             |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py stock_zh_index_daily_tx --symbol sh000919 --format pretty
+python3 scripts/akshare_cli.py stock_zh_index_daily_tx --symbol sh000919 --format csv > index_data_tx.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak
@@ -264,6 +291,15 @@ print(stock_zh_index_daily_tx_df)
 | amount | float64 | -                     |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py stock_zh_index_daily_em --symbol sz399812 --format pretty
+python3 scripts/akshare_cli.py stock_zh_index_daily_em --symbol sz399812 --start_date 20240101 --end_date 20240131 --format csv > index_data_em.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak
@@ -326,6 +362,15 @@ print(stock_zh_index_daily_em_df)
 | 换手率 | float64 | 注意单位: % |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py index_zh_a_hist --symbol 000016 --period daily --start_date 19700101 --end_date 22220101 --format pretty
+python3 scripts/akshare_cli.py index_zh_a_hist --symbol 000016 --period daily --format csv > index_hist.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak
@@ -1652,6 +1697,15 @@ print(index_stock_info_df)
 | 纳入日期 | object | 成份股纳入日期 |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py index_stock_cons --symbol 000300 --format pretty
+python3 scripts/akshare_cli.py index_stock_cons --symbol 000300 --format csv > index_components.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak

@@ -34,6 +34,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py macro_cnbs --format pretty
+python3 scripts/akshare_cli.py macro_cnbs --format csv > macro_cnbs.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -365,6 +374,16 @@ print(macro_china_shrzgm_df)
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py macro_china_gdp_yearly --format pretty
+python3 scripts/akshare_cli.py macro_china_gdp_yearly --format csv > macro_gdp.csv
+python3 scripts/akshare_cli.py macro_china_gdp_yearly --format json > macro_gdp.json
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -463,6 +482,15 @@ print(macro_china_gdp_yearly_df)
 | 前值  | float64 | 注意单位: % |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py macro_china_cpi_yearly --format pretty
+python3 scripts/akshare_cli.py macro_china_cpi_yearly --format csv > macro_cpi_yearly.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak
@@ -731,6 +759,15 @@ print(macro_china_imports_yoy_df)
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py macro_china_trade_balance --format pretty
+python3 scripts/akshare_cli.py macro_china_trade_balance --format csv > macro_trade_balance.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -785,6 +822,15 @@ print(macro_china_trade_balance_df)
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py macro_china_gyzjz --format pretty
+python3 scripts/akshare_cli.py macro_china_gyzjz --format csv > macro_gyzjz.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -837,6 +883,15 @@ print(macro_china_gyzjz_df)
 | 前值  | float64 | 注意单位: % |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py macro_china_industrial_production_yoy --format pretty
+python3 scripts/akshare_cli.py macro_china_industrial_production_yoy --format csv > macro_industrial_production.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak

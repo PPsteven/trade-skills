@@ -578,6 +578,15 @@ print(futures_inventory_99_df)
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py futures_inventory_em --symbol A --format pretty
+python3 scripts/akshare_cli.py futures_inventory_em --symbol A --format csv > futures_inventory.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -908,6 +917,15 @@ P.S. 这里仅列出值(pandas.DataFrame)的字段信息
 | variety                 | object  | 品种      |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py futures_dce_position_rank --date 20200513 --format pretty
+python3 scripts/akshare_cli.py futures_dce_position_rank --date 20200513 --format json > futures_position_rank.json
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak
@@ -1578,6 +1596,15 @@ print(futures_to_spot_shfe_df)
 | 交割金额 | int64  | -  |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py futures_delivery_dce --date 202312 --format pretty
+python3 scripts/akshare_cli.py futures_delivery_dce --date 202312 --format csv > futures_delivery.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak
