@@ -257,6 +257,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py option_contract_info_ctp --format pretty
+python3 scripts/akshare_cli.py option_contract_info_ctp --format csv > option_contracts.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -325,6 +334,15 @@ P.S. 可以通过调用 ak.option_finance_sse_underlying(symbol="华夏上证50E
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py option_finance_board --symbol "华夏上证50ETF期权" --end_month 2212 --format pretty
+python3 scripts/akshare_cli.py option_finance_board --symbol "华夏上证50ETF期权" --end_month 2212 --format csv > option_finance.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -383,6 +401,15 @@ print(option_finance_board_df)
 | 数量     | int64   | -   |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py option_finance_board --symbol "华泰柏瑞沪深300ETF期权" --end_month 2212 --format pretty
+python3 scripts/akshare_cli.py option_finance_board --symbol "华泰柏瑞沪深300ETF期权" --end_month 2212 --format csv > option_finance_300.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak

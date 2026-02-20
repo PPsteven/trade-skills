@@ -43,6 +43,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py qdii_e_index_jsl --format pretty
+python3 scripts/akshare_cli.py qdii_e_index_jsl --format csv > qdii_etf.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 

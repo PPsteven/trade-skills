@@ -33,6 +33,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py forex_spot_em --format pretty
+python3 scripts/akshare_cli.py forex_spot_em --format csv > forex_spot.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -90,6 +99,15 @@ print(forex_spot_em_df)
 | 昨收  | float64 | -  |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py forex_hist_em --symbol USDCNH --format pretty
+python3 scripts/akshare_cli.py forex_hist_em --symbol USDCNH --format csv > forex_hist.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak

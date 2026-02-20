@@ -35,6 +35,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py bond_info_cm --bond_type 短期融资券 --coupon_type 零息式 --issue_year 2019 --grade A-1 --format pretty
+python3 scripts/akshare_cli.py bond_info_cm --bond_type 短期融资券 --format csv > bond_info.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
@@ -73,6 +82,15 @@ print(bond_info_cm_df)
 | value | object | -   |
 
 接口示例
+
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py bond_info_detail_cm --symbol "19万林投资CP001" --format pretty
+python3 scripts/akshare_cli.py bond_info_detail_cm --symbol "19万林投资CP001" --format csv > bond_detail.csv
+```
+
+Python (Legacy):
 
 ```python
 import akshare as ak
