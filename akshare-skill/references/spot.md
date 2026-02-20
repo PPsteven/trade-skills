@@ -26,6 +26,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py spot_price_qh --symbol 螺纹钢 --format pretty
+python3 scripts/akshare_cli.py spot_price_qh --symbol 玉米 --format csv > spot_price.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 

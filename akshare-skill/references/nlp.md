@@ -34,6 +34,15 @@ Indicator Info
 
 接口示例-entity
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py nlp_ownthink --word 人工智能 --indicator entity --format pretty
+python3 scripts/akshare_cli.py nlp_ownthink --word 区块链 --indicator desc --format json > nlp_result.json
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 

@@ -30,6 +30,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py migration_area_baidu --area 重庆市 --indicator move_in --date 20230922 --format pretty
+python3 scripts/akshare_cli.py migration_area_baidu --area 北京市 --indicator move_out --date 20230922 --format csv > migration_area.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 

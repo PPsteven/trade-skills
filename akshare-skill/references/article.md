@@ -89,6 +89,15 @@ Oxford-Man-已实现波动率数据
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py article_oman_rv --symbol FTSE --index rk_th2 --format pretty
+python3 scripts/akshare_cli.py article_oman_rv --symbol SPX --index rk_th2 --format csv > article_oman.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 

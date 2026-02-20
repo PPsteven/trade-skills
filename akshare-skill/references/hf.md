@@ -26,6 +26,15 @@
 
 接口示例
 
+CLI Usage (Recommended):
+
+```bash
+python3 scripts/akshare_cli.py hf_sp_500 --year 2017 --format pretty
+python3 scripts/akshare_cli.py hf_sp_500 --year 2015 --format csv > hf_sp500.csv
+```
+
+Python (Legacy):
+
 ```python
 import akshare as ak
 
